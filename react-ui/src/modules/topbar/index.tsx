@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as naviagtionActions from '../../models/navigation/actions';
-import * as userActions from '../../models/user/actions';
+import * as actions from './actions';
 import * as userSelectors from '../../models/user/selectors';
 import Link from '../../components/link'
 
@@ -10,7 +11,12 @@ function Topbar() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    dispatch(userActions.fetchUser());
+    useEffect(() => {
+        dispatch(actions.activate());
+        return () => {
+            dispatch(actions.deactivate());
+        }
+    })
 
     const userName = useSelector(userSelectors.getUserName);
     
@@ -34,7 +40,11 @@ function Topbar() {
                             <Link onClick={() => onNavigate('/page2')}>Page 2</Link>
                         </li>
                     </ul>
-                    <div>{userName}</div>
+                    <div className='right'>
+                        <ul>
+                            <li><Link>{userName}</Link></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Topbar from '../../components/topbar';
+import Topbar from '../topbar';
 import Router from '../../components/router';
 
 function App () {

@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import * as actionTypes from './action-types';
-import api from '../../modules/api';
+import api from '../../common/api';
 
 function* fetchUser() {
     const { data } = yield call(api.v1.get, 'user');
