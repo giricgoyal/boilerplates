@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as naviagtionActions from '../../models/navigation/actions';
 import * as actions from './actions';
 import * as userSelectors from '../../models/user/selectors';
+import * as navigationSelectors from '../../models/navigation/selectors';
 import Link from '../../components/link'
 
 function Topbar() {
@@ -19,9 +20,10 @@ function Topbar() {
     })
 
     const userName = useSelector(userSelectors.getUserName);
+    const currentPage = useSelector(navigationSelectors.getCurrentPage);
     
     const onNavigate = (path) => {
-        dispatch(naviagtionActions.navigate(path))
+        dispatch(naviagtionActions.setPage(path))
         history.push(path)
     }
 
@@ -31,13 +33,13 @@ function Topbar() {
                 <div className='nav-wrapper'>
                     <ul>
                         <li>
-                            <Link onClick={() => onNavigate('/')}>Home</Link>
+                            <Link isActive={currentPage === '/'} onClick={() => onNavigate('/')}>Home</Link>
                         </li>
                         <li>
-                            <Link onClick={() => onNavigate('/page1')}>Page 1</Link>
+                            <Link isActive={currentPage === '/page1'} onClick={() => onNavigate('/page1')}>Page 1</Link>
                         </li>
                         <li>
-                            <Link onClick={() => onNavigate('/page2')}>Page 2</Link>
+                            <Link isActive={currentPage === '/page2'} onClick={() => onNavigate('/page2')}>Page 2</Link>
                         </li>
                     </ul>
                     <div className='right'>

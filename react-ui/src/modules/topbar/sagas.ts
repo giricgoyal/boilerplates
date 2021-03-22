@@ -1,8 +1,10 @@
 import { put, takeEvery } from 'redux-saga/effects';
 import * as actionTypes from './action-types';
 import * as userActions from '../../models/user/actions';
+import * as navigationActions from '../../models/navigation/actions';
 
 function* onActivate() {
+    yield put(navigationActions.setPage(window.location.pathname));
     yield put(userActions.fetchUser());
 }
 

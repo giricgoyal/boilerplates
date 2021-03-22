@@ -1,7 +1,7 @@
-import { NAVIGATE } from './action-types'
+import { SET_PAGE } from './action-types'
 
-export const navigate = page => ({
-    type: NAVIGATE,
+export const setPage = page => ({
+    type: SET_PAGE,
     page
 })
 

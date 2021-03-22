@@ -1,17 +1,15 @@
 import * as navigationActionTypes from './action-types'
 
 const initialState = {
-    page: ''
+    page: '/'
 }
 
 const navigation = (state = initialState, action) => {
     switch (action.type) {
-        case navigationActionTypes.NAVIGATE: {
+        case navigationActionTypes.SET_PAGE: {
             return {
                 ...state,
-                navigation: {
-                    page: action.page
-                }
+                page: action.page
             }
         }
         default: {
