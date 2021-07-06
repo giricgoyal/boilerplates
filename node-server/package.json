@@ -1,11 +1,15 @@
 {
   "name": "node-server",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Boiletplate for node rest server",
   "main": "dist/app.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --pretty --transpile-only src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --project ./",
+    "prebuild": "rm -rf dist",
+    "start": "ts-node-dev --respawn --pretty --prefer-ts true -r tsconfig-paths/register --transpile-only src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:test": "eslint \"src/**/*.{ts,tsx}\" --quiet",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --quiet --fix"
   },
   "author": "Giric Goyal",
   "license": "ISC",
@@ -14,18 +18,39 @@
     "url": ""
   },
   "devDependencies": {
-    "ts-node-dev": "^1.1.6",
-    "typescript": "^4.2.3"
-  },
-  "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/body-parser": "^1.19.0",
     "@types/cors": "^2.8.10",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.11",
+    "@types/form-data": "^2.5.0",
+    "@types/lodash": "^4.14.170",
+    "@types/multer": "^1.4.6",
     "@types/node": "^14.14.35",
+    "@types/node-cron": "^2.0.3",
+    "@types/randomstring": "^1.1.6",
+    "@types/unzipper": "^0.10.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "express": "^4.17.1",
-    "tslint": "^6.1.3"
+    "form-data": "^4.0.0",
+    "lodash": "^4.17.21",
+    "multer": "^1.4.2",
+    "node-cron": "^3.0.0",
+    "prettier": "^2.3.2",
+    "randomstring": "^1.2.1",
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3",
+    "typescript-transform-paths": "^3.0.2",
+    "unzipper": "^0.10.11"
   }
 }

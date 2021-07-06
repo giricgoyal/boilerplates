@@ -1,5 +1,5 @@
-import { userRouter } from './user/router';
+import { router as v1Routes } from './components/v1/routers'
 
-export const initRoutes = (app) => {
-    app.use("/api/v1/user", userRouter)
+export const initRoutes = (app): void => {
+    app.use('/api/v1', v1Routes)
 }
