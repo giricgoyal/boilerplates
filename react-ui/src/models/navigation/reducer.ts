@@ -1,7 +1,7 @@
 import * as navigationActionTypes from './action-types'
 
 const initialState = {
-    page: '/'
+    page: '/',
 }
 
 const navigation = (state = initialState, action) => {
@@ -9,16 +9,15 @@ const navigation = (state = initialState, action) => {
         case navigationActionTypes.SET_PAGE: {
             return {
                 ...state,
-                page: action.page
+                page: action.page,
             }
         }
         default: {
             return state
         }
     }
-    
 }
 
 export default {
-    navigation
+    navigation,
 }

@@ -1,1 +1,1 @@
-export const getCurrentPage = (state) => state?.navigation?.page;
+export const getCurrentPage = (state) => state?.navigation?.page

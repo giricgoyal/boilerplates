@@ -1,7 +1,7 @@
 import * as actionTypes from './action-types'
 
 const initialState = {
-    name: ''
+    name: '',
 }
 
 const user = (state = initialState, action) => {
@@ -16,9 +16,8 @@ const user = (state = initialState, action) => {
             return state
         }
     }
-
 }
 
 export default {
-    user
+    user,
 }

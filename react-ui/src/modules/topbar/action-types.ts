@@ -1,2 +1,2 @@
-export const ACTIVATE = 'topbar/activate';
-export const DEACTIVATE = 'topbar/deactivate';
+export const ACTIVATE = 'topbar/activate'
+export const DEACTIVATE = 'topbar/deactivate'
