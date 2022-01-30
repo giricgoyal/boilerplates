@@ -1,16 +1,11 @@
 import * as React from 'react'
-import { Switch } from 'react-router-dom'
-import Route from './components/route'
-import Login from './modules/login'
-import Admin from './modules/admin'
+import { Route, Routes } from 'react-router-dom'
+import Applications from './modules/applications'
 
-function Router() {
+export default function Router(): React.ReactElement {
     return (
-        <>
-            <Route path="/login" Component={Login} />
-            <Route path="/admin" Component={Admin} />
-        </>
+        <Routes>
+            <Route path="/" element={<Applications />} />
+        </Routes>
     )
 }
-
-export default Router

@@ -1,1 +1,5 @@
-@import '~bootstrap/scss/bootstrap';
+@import './components/variables';
+@import './components/normalize';
+
+@import './components/app';
+@import './components/navbar';
