@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
 
 export default function Navbar(): ReactElement {
-    return <div className="navbar">Personio</div>
+    return <div className="navbar">Logo</div>
 }

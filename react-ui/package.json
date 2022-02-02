@@ -4,11 +4,11 @@
   "description": "Personio Demo",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config configs/webpack.dev.js",
+    "start": "webpack-dev-server --config configs/webpack.dev.js",
     "build:dev": "webpack --config configs/webpack.dev.js -d",
     "build:prod": "webpack --config configs/webpack.prod.js",
-    "utest": "jest",
-    "utest:watch": "jest --watch",
+    "utest": "jest --coverage",
+    "utest:watch": "jest --coverage --watch",
     "utest:update-snapshot": "jest --updateSnapshot",
     "test": "yarn lint:test && yarn utest",
     "lint:test": "eslint \"src/**/*.{ts,tsx}\" --quiet",
@@ -86,7 +86,18 @@
       "^.+\\.svg$": "./configs/svgTransform.js"
     },
     "testEnvironment": "jest-environment-jsdom",
-    "testRegex": "(./tests/.*|(\\.|/)(spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(tests/.*|(\\.|/))(spec).(jsx?|tsx?)$",
+    "collectCoverage": true,
+    "coverageReporters": ["lcov"],
+    "coverageDirectory": "test-coverage",
+    "coverageThreshold": {
+      "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+      }
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -99,7 +110,8 @@
       "."
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy",
+      "^react(.*)$": "<rootDir>/node_modules/react$1"
     }
   }
 }
