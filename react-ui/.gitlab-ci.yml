@@ -37,8 +37,6 @@ default:
 variables:
     SSH_HOST: 'silico38@biz228.inmotionhosting.com'
     SSH_PORT: '2222'
-    PROD_DOMAIN_PATH: 'domains/demos.giricgoyal.com/personio'
-    REPO_NAME: 'personio-demo'
 
 stages:
     - setup
@@ -92,7 +90,7 @@ deploy_prod_job:
         - scp -r -P $SSH_PORT dist/. $SSH_HOST:$PROD_DOMAIN_PATH
     stage: deploy
     only:
-        - main@giricgoyal/personio-demo
+        - main
     environment:
         name: production
     allow_failure: false
