@@ -86,7 +86,7 @@
       "^.+\\.svg$": "./configs/svgTransform.js"
     },
     "testEnvironment": "jest-environment-jsdom",
-    "testRegex": "(tests/.*|(\\.|/))(spec).(jsx?|tsx?)$",
+    "testRegex": "(__tests__/.*|(\\.|/))(spec).(jsx?|tsx?)$",
     "collectCoverage": true,
     "coverageReporters": ["lcov"],
     "coverageDirectory": "test-coverage",
