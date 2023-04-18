@@ -89,7 +89,7 @@
     "testRegex": "(__tests__/.*|(\\.|/))(spec).(jsx?|tsx?)$",
     "collectCoverage": true,
     "coverageReporters": ["lcov"],
-    "coverageDirectory": "test-coverage",
+    "coverageDirectory": "coverage",
     "coverageThreshold": {
       "global": {
       "branches": 0,

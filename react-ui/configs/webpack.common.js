@@ -21,8 +21,8 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js', '.json', '.html'],
         alias: {
             root: path.resolve(__dirname, '..'),
-            src: path.resolve(__dirname, '..', 'src')
-        }
+            src: path.resolve(__dirname, '..', 'src'),
+        },
     },
     module: {
         rules: [
