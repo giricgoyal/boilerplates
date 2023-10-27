@@ -5,7 +5,7 @@ module.exports = function (configDirs) {
     const devConfig = Object.assign({}, common)
     devConfig.mode = 'development'
     devConfig.devServer = {
-        port: 3001,
+        port: 8888,
         proxy: [
             {
                 path: '/api/*',
