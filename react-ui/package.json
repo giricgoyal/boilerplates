@@ -1,9 +1,8 @@
 {
     "name": "react-redux",
     "version": "1.0.0",
-    "description": "Personio Demo",
+    "description": "Boilerplate UI",
     "main": "index.js",
-    "type": "module",
     "scripts": {
         "start": "webpack-dev-server --config configs/webpack.dev.js",
         "build:dev": "webpack -d --config configs/webpack.dev.js && cp -r ./public/. ./dist",
