@@ -11,6 +11,13 @@ import './styles/index.scss'
 import store from './redux/store'
 import App from './App'
 
+import makeServer from 'stub-server/server'
+
+if (process.env.NODE_ENV === 'development') {
+    console.log('make server')
+    makeServer()
+}
+
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>

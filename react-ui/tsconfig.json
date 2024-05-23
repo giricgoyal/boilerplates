@@ -1,40 +1,25 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "esnext",
-    "strict": true,
-    "target": "esnext",
-    "jsx": "react",
-    "sourceMap": true,
-    "removeComments": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "lib": [
-      "es5",
-      "es2015",
-      "dom",
-      "scripthost"
-    ],
-    "typeRoots": [
-      "./custom-types",
-      "./custom-types/globals",
-      "./node_modules/@types",
-    ],
-    "esModuleInterop": true,
-    "paths": {
-      "src/*": [
-        "src/*"
-      ]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "esnext",
+        "strict": true,
+        "target": "esnext",
+        "jsx": "react",
+        "sourceMap": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "lib": ["es5", "es2015", "dom", "scripthost"],
+        "typeRoots": ["./custom-types", "./custom-types/globals", "./node_modules/@types"],
+        "esModuleInterop": true,
+        "paths": {
+            "src/*": ["src/*"],
+            "stub-server/*": ["stub-server/*"]
+        }
     },
-  },
-  "include": [
-    "./src/**/*",
-    "./tests/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "include": ["./src/**/*", "./tests/**/*"],
+    "exclude": ["node_modules"]
 }

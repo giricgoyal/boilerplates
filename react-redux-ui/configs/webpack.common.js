@@ -22,6 +22,7 @@ module.exports = {
         alias: {
             root: path.resolve(__dirname, '..'),
             src: path.resolve(__dirname, '..', 'src'),
+            'stub-server': path.resolve(__dirname, '..', 'stub-server'),
         },
     },
     module: {

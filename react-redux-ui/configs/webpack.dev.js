@@ -6,12 +6,6 @@ module.exports = function (configDirs) {
     devConfig.mode = 'development'
     devConfig.devServer = {
         port: 8888,
-        proxy: [
-            {
-                path: '/api/*',
-                target: 'http://localhost:3001/',
-            },
-        ],
         historyApiFallback: true,
         watchFiles: 'src/*',
     }

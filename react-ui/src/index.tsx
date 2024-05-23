@@ -7,4 +7,11 @@ import * as ReactDOM from 'react-dom'
 import './styles/index.scss'
 import App from './App'
 
+import makeServer from 'stub-server/server'
+
+if (process.env.NODE_ENV === 'development') {
+    console.log('make server')
+    makeServer()
+}
+
 ReactDOM.render(<App />, document.getElementById('app'))
